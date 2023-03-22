@@ -1,7 +1,7 @@
 import React from 'react'
 import './topicbox.css'
 
-export default function TopicBox() {
+export default function TopicBox(props) {
 
 //const topic = "My favourite food is kottu"
 //const item = " and rice"
@@ -14,9 +14,8 @@ const c=a+b;
   return (
     <div>
         <div className="topicBox">
-            <span className="text">{c}{alert("Hellow")}{[20,45,34,67]}</span>
-            <span className="text">{[20,45,34,67]}</span>
-            
+            <span className="text">My favourite color is {props.color} and food is {props.food}</span>
+            {props.children}
         </div>
     </div>
   )
